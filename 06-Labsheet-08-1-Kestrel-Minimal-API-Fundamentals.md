@@ -179,7 +179,7 @@
 ผลการทดลอง
 
 `/api/student`
-![[images Lab/1.png]]
+![image Lab](images%20Lab/1.png)
 
 โค้ดใน VS Code
 ```csharp
