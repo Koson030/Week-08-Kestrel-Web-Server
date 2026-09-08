@@ -62,7 +62,7 @@
 
 1. ในหน้าจอ Terminal ขณะที่เซิร์ฟเวอร์กำลังรันอยู่ ให้กดปุ่ม `Ctrl + C` เพื่อหยุดโปรแกรม
 2. กลับไปที่หน้าเบราว์เซอร์แล้วกดปุ่ม **Refresh (F5)** สังเกตว่าเกิดอะไรขึ้น และอธิบายสั้นๆ ว่าทำไมจึงเป็นเช่นนั้น
-   - **คำตอบ** ....................................................................................................
+   - **คำตอบ** เพราะเซิฟเวอร์ไม่ได้รันอยู่ เลยไม่สามารถเข้า Web ได้ 
 
 ---
 
@@ -110,7 +110,7 @@
      "gateway": "ESP32-EdgeGateway",
      "status": "Online",
      "uptimeSeconds": 25,
-     "isHealthy": true
+	     "isHealthy": true
    }
    ```
 
@@ -155,8 +155,8 @@
 จากนั้นทดลองเปลี่ยนข้อความที่ URL bar แล้วสังเกตุและบันทึกผลที่ terminal
 **ผลลัพธ์ที่คาดหวังบนเทอร์มินอล**
 ```
-[xx:xx:xx] LED Control: on
-[xx:xx:xx] LED Control: off
+[08:56:23] LED Control: on
+[08:56:44] LED Control: off
 ```
 
 
@@ -175,6 +175,23 @@
    - `timestamp`= เวลาปัจจุบันของเซิร์ฟเวอร์ (`DateTime.Now.ToString(...)`)
 
  **หลักฐานการส่งงาน** บันทึกภาพหน้าจอเบราว์เซอร์ที่เปิดแสดงผล JSON จาก `/api/student` พร้อมโค้ดใน VS Code ลงในรายงานผลการทดลอง
+
+ผลการทดลอง
+
+`/api/student`
+![[Pasted image 20260908090535.png]]
+
+โค้ดใน VS Code
+```csharp
+	    app.MapGet("/api/student", () => new
+{
+    studentId = "67030030",
+    studentName = "Koson Pengphipat",
+    faculty = "คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี สาขาเทคโนโลยีคอมพิวเตอร์",
+    targetSensor = "DHT22",
+    timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+});   
+```
 
 ---
 
