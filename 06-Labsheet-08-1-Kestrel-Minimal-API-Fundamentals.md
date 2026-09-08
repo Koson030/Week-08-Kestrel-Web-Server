@@ -178,9 +178,11 @@
 
 ผลการทดลอง
 
+---
 `/api/student`
 ![image Lab](images%20Lab/1.png)
-
+---
+---
 โค้ดใน VS Code
 ```csharp
 app.MapGet("/api/student", () => new
