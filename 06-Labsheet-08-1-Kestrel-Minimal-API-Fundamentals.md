@@ -179,7 +179,7 @@
 ผลการทดลอง
 
 ---
-`/api/student`
+/api/student
 ![image Lab](images%20Lab/1.png)
 ---
 ---
