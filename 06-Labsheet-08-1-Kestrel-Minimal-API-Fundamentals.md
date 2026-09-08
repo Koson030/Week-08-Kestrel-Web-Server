@@ -179,11 +179,11 @@
 ผลการทดลอง
 
 `/api/student`
-![[Pasted image 20260908090535.png]]
+![[image/image Lab1.png]]
 
 โค้ดใน VS Code
 ```csharp
-	    app.MapGet("/api/student", () => new
+app.MapGet("/api/student", () => new
 {
     studentId = "67030030",
     studentName = "Koson Pengphipat",
